@@ -1,11 +1,28 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Header from '../components/Header.astro';
+import Main from '../components/Main.astro';
 ---
 
 <Layout>
-	<Welcome />
+  <main id="cv-content" class="max-w-[21cm] mx-auto p-12 bg-white dark:bg-[#1E293B] min-h-[29.7cm] shadow-xl print:shadow-none dark:shadow-highlight/25 dark:border dark:border-white/5">
+    <Header/>
+    <Main/>
+  </main>
 </Layout>
+
+<style>
+  @media print {
+    @page {
+      margin: 0;
+      size: A4;
+    }
+    body {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    #cv-content {
+    margin: 0;
+    }
+  }
+</style>

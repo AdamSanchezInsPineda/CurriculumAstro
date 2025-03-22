@@ -1,22 +1,36 @@
+---
+import "../styles/global.css";
+import '@fontsource/inter/300.css';
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/500.css';
+import '@fontsource/inter/600.css';
+import "../components/DarkModeSwitch.astro";
+import "../components/DownloadPDF.astro";
+import DarkModeSwitch from "../components/DarkModeSwitch.astro";
+import DownloadPDF from "../components/DownloadPDF.astro";
+---
+
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="es" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Adam Sánchez Marín</title>
+  </head>
+  <body class="bg-zinc-50 dark:bg-[#0F172A] min-h-screen py-8 print:bg-white print:p-0">
+    <slot />
+
+    <DarkModeSwitch/>
+    <DownloadPDF/>
+
+    <script src="../scripts/app.js"></script>
+  </body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+<style is:global>
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
 </style>

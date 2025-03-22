@@ -1,0 +1,19 @@
+---
+import Profile from "./Profile.astro";
+import Experience from "./Experience.astro";
+import Habilities from "./Habilities.astro";
+import Education from "./Education.astro";
+// El componente <Portfolio/> iría debajo de Experience
+---
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+    <div class="col-span-1 md:col-span-2">
+        <Profile/>
+        <Experience/>
+    </div>
+
+    <div class="col-span-1">
+        <Habilities/>
+        <Education/>
+    </div>
+  </div>
