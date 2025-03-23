@@ -8,7 +8,7 @@ import "../components/DarkModeSwitch.astro";
 import "../components/DownloadPDF.astro";
 import DarkModeSwitch from "../components/DarkModeSwitch.astro";
 import DownloadPDF from "../components/DownloadPDF.astro";
-import SpeedInsights  from "@vercel/speed-insights/astro";
+import SpeedInsights from "@vercel/speed-insights/astro";
 ---
 
 <!doctype html>
@@ -19,13 +19,13 @@ import SpeedInsights  from "@vercel/speed-insights/astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Adam Sánchez Marín</title>
-    <SpeedInsights/>
   </head>
   <body class="bg-zinc-50 dark:bg-[#0F172A] min-h-screen py-8 print:bg-white print:p-0">
     <slot />
 
     <DarkModeSwitch/>
     <DownloadPDF/>
+    <SpeedInsights />
 
     <script src="../scripts/app.js"></script>
   </body>
