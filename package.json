@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource/inter": "^5.0.16",
+    "@vercel/speed-insights": "^1.2.0",
     "astro": "^5.2.5",
     "html2pdf.js": "^0.10.3",
     "tailwindcss": "^3.4.1",
